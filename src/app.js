@@ -1,6 +1,6 @@
-import { Server } from 'engine.io';
+/* import { Server } from 'engine.io'; */
 import express from 'express';
-import {server} from 'socket.io';
+import {Server} from 'socket.io';
 import __dirname from './utils.js'
 
 const app = express();
@@ -10,7 +10,7 @@ const server =app.listen(PORT,()=>{
     console.log(`listening on PORT ${PORT}`)
 })
 
-const io =new Server(server);
+const io = new Server(server);
 
 const log=[];
 io.on('connection',socket=>{
