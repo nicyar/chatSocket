@@ -7,7 +7,7 @@ Swal.fire({
     input:'text',
     allowOutsideClick:false,
     inputValidator:(value)=>{
-        return!value && '¡necesitas registrarte primero!'
+        return !value && '¡necesitas registrarte primero!'
     }
 }).then(result=>{
     user=result.value;
@@ -29,7 +29,7 @@ socket.on('log',data=>{
     
     let messages="";
     data.forEach(log=>{
-        messages=messages+ `${log.user} dice:<${log.message}>`
+        messages=messages+ `${log.user} dice:<-${log.message}-> </br>`
     })
     log.innerHTML=messages
 })

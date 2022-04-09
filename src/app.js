@@ -14,9 +14,9 @@ const io = new Server(server);
 
 const log=[];
 io.on('connection',socket=>{
-    socket.on('Message',data=>{
+    socket.on('message',data=>{
         log.push(data);
-        /* socket.emit */
-        io.emit//este es para todos en general 
+        /* socket.emit --> no es global*/
+        io.emit('log',log)//este es para todos en general 
     })
 })
